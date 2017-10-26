@@ -3,10 +3,29 @@
   <head>
     <title>AyD2 Proyecto</title>
     <%= csrf_meta_tags %>
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
   <body>
+
+  <header class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container">
+      <%= link_to "Dummys Transaction", '#', id: "logo" %>
+      <nav>
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to "Home",  :controller => "welcome"  %></li>
+          <li><%= link_to "Log in", :action => "login", :controller => "login"%></li>
+          <li><%= link_to "About", '#' %></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+    <div class="container">
+
     <%= yield %>
+
   </body>
 </html>

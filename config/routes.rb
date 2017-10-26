@@ -4,19 +4,18 @@ Rails.application.routes.draw do
   root 'welcome#index'
   
   #Metodos para el login
-  get '/register', to: 'welcome#register'
+  
+  get '/login', to: 'login#login'
+  
+  post '/login', to: 'login#create'
 
+  #metodos para el menu
   get '/help', to: 'welcome#help'
 
   get '/about', to: 'welcome#about'
-
-  get '/contact', to: 'welcome#contact'
-
-  get '/login', to: 'welcome#new'
-
-  post '/login', to: 'welcome#create'
-
-  delete '/logout', to: 'welcome#delete'
+  
+  #metodos para cerrar sesion
+  delete '/logout', to: 'login#delete'
 
   #Metodos de favio
   get 'boton/btn'
