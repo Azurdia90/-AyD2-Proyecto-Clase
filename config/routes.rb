@@ -12,11 +12,11 @@ Rails.application.routes.draw do
 
   get '/contact', to: 'welcome#contact'
 
-  get '/login', to: 'sessions#new'
+  get '/login', to: 'welcome#new'
 
-  post '/login', to: 'sessions#create'
+  post '/login', to: 'welcome#create'
 
-  delete '/login', to: 'sessions#delete'
+  delete '/logout', to: 'welcome#delete'
 
   #Metodos de favio
   get 'boton/btn'
